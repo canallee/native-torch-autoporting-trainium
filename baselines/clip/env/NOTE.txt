@@ -1,0 +1,1 @@
+note: no separate reference env — CLIP's only dep (transformers) is already present at torch 2.11; zero conflict risk. setup_reference_env.sh exercised at M2 (evo2).

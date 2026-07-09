@@ -1,0 +1,6 @@
+# torch / torch-neuronx / neuronxcc come from the Beta-3 `torch-neuron` conda env — do NOT reinstall.
+# The CLIP model definition is VENDORED in src/clip_neuron/ (openai/CLIP, MIT). Runtime deps:
+ftfy
+regex
+pillow
+numpy

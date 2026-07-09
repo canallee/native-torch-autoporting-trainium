@@ -1,0 +1,6 @@
+# torch / torch-neuronx / neuronxcc come from the Beta-3 `torch-neuron` conda env — do NOT reinstall.
+# INTEGRATION mode: the Nucleotide Transformer definition ships as trust_remote_code written for
+# transformers 4.32; it is VENDORED + minimally patched here for the Beta-3 transformers 5.13 stack
+# (see src/nucleotide_transformer_neuron/VENDORED.md). Only transformers + huggingface_hub are needed.
+transformers==5.13.0
+huggingface_hub

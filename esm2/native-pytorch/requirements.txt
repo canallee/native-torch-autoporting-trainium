@@ -1,0 +1,3 @@
+# torch / torch-neuronx / neuronxcc come from the Beta-3 `torch-neuron` conda env — do NOT reinstall.
+# INTEGRATION mode: ESM-2's definition is the installed HF transformers EsmModel (sealed, not vendored).
+transformers==5.13.0

@@ -1,0 +1,12 @@
+# torch / torch-neuronx / neuronxcc come from the Beta-3 `torch-neuron` conda env — do NOT reinstall.
+# INTEGRATION mode: GPN-Star's definition is the SEALED `gpn` package (gpn.star.model.GPNStarModel),
+# installed --no-deps so it uses the Beta-3 transformers/torch rather than pulling its own.
+#
+#   pip install --no-deps gpn        # or: pip install --no-deps -e ../port-targets/gpn
+#
+transformers==5.13.0
+networkx>=2.8          # GPN-Star clusters clades from the phylogeny at model-construction time
+numpy
+huggingface_hub        # weights via snapshot_download (NOT git-lfs clone)
+safetensors            # load model.safetensors directly (bypasses transformers-5.13 meta-init; see README)
+gpn==0.7               # github.com/songlab-cal/gpn — provides gpn.star.model (the sealed definition)

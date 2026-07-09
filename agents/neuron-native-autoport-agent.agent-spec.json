@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1",
+  "name": "neuron-native-autoport-agent",
+  "config": {
+    "description": "Autonomous agent that ports a CUDA/GPU PyTorch model to a native torch_neuronx port on AWS Trainium (native-PyTorch style) — the model's own editable definition (dev mode) or a feature-extractor subgraph (integration mode). Phase A freezes a CPU/CUDA reference oracle (inference + one backprop); Phase B ports, compiles, and validates the Trainium run against that oracle (>= 0.99 cosine), then ships parity notebooks for inference, backprop, and (dev mode) multi-step on-device training.",
+    "systemPrompt": "{{aim:include:agents/neuron-native-autoport-agent.md}}",
+    "model": "opus"
+  },
+  "dependencies": {
+    "skills": {
+      "skillNames": [
+        "neuron-native-autoport"
+      ]
+    }
+  },
+  "clientConfig": {
+    "kiroCli": {
+      "tools": ["@builtin"],
+      "allowedTools": ["fs_read", "fs_write", "grep", "glob", "execute_bash", "todo_list", "delegate"]
+    }
+  }
+}

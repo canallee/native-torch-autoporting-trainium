@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pip-build/
+build/
+dist/
+
+# venvs
+.venv/
+venv/
+
+# Neuron / compile artifacts
+neuron-compile-cache/
+*.neff
+*.hlo
+*.pb
+neff_output/
+
+# model weights & large artifacts
+*.pt
+*.pth
+*.bin
+*.onnx
+*.ckpt
+*.safetensors
+agent_artifacts/
+weights/
+hf/
+
+# jupyter checkpoints
+.ipynb_checkpoints/
+
+# Phase-A: cloned target repos live OUTSIDE this repo (sibling ../port-targets/).
+# If anyone clones them inside by mistake, ignore it:
+port-targets/
+# Phase-A raw reference tensors are local-only; the committed oracle is baselines/<model>/MANIFEST.json
+baselines/*/artifacts/
+
+# scratch
+*.log
+.DS_Store
+gpn-star/native-pytorch/example/vep/data/
+
+# agentic skill-test outputs (throwaway)
+*-devtest/
+baselines/*-devtest/

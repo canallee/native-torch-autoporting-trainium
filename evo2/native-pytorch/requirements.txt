@@ -1,0 +1,5 @@
+# torch / torch-neuronx / neuronxcc come from the Beta-3 `torch-neuron` conda env — do NOT reinstall.
+# Evo2 definition is VENDORED in src/evo2_neuron/ (Apache-2.0). Runtime deps:
+transformers==5.13.0
+einops
+huggingface_hub
