@@ -1,0 +1,35 @@
+neuron-native-autoport
+Copyright 2026 The neuron-native-autoport authors
+
+This product includes original software for porting CUDA/GPU PyTorch models to AWS Trainium
+(native torch_neuronx): the agent skill, the driver agent, the porting/reference harnesses,
+the parity notebooks, and the Neuron op-rewrite patches. That original work is licensed under
+the Apache License, Version 2.0 (see LICENSE).
+
+Third-party model definitions redistributed ("vendored") in this repository — each under its
+own upstream license, with the full license text in the corresponding directory:
+
+  - clip/native-pytorch/src/clip_neuron/
+      OpenAI CLIP — MIT — Copyright (c) 2021 OpenAI
+
+  - evo2/native-pytorch/src/evo2_neuron/
+      Evo2 (Taykhoom/Evo2-1B-8K) — Apache License 2.0
+
+  - gpn-star/native-pytorch/src/gpn_star_neuron/
+      GPN / GPN-Star (songlab-cal/gpn) — MIT — Copyright (c) 2022 Song Lab @ Cal
+
+  - nucleotide-transformer/native-pytorch/src/nucleotide_transformer_neuron/
+      Nucleotide Transformer (InstaDeepAI) — CC-BY-NC-SA-4.0  (NON-COMMERCIAL, ShareAlike)
+
+*** NON-COMMERCIAL COMPONENT ***
+The Nucleotide-Transformer port (and the Neuron patches applied to it) is licensed
+CC-BY-NC-SA-4.0: it may be used for NON-COMMERCIAL purposes only, with attribution, and
+derivatives must be shared alike. If you need a fully commercial-friendly subset, exclude the
+nucleotide-transformer/ directory — the other four ports are permissive (MIT / Apache-2.0).
+
+ESM-2 (esm2/) uses the installed Hugging Face facebook/esm2 model (MIT) at runtime; it is not
+vendored in this repository.
+
+AWS native-PyTorch Neuron Beta ("Beta 3") is required to run these ports. It is access-gated by
+the AWS Neuron team; its DLC/wheels and user guide are AWS private-beta material and are NOT
+included or redistributed here.

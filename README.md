@@ -57,3 +57,27 @@ outside this directory; neither is needed to run or deploy the skill:
 - `../neuron-agentic-development/` — AWS's deployable skill package; **packaging blueprint only**.
 
 See [docs/PORTING_SKILL_DESIGN.md](docs/PORTING_SKILL_DESIGN.md) for the full plan.
+
+## Licensing
+
+The original work here — the skill, the driver agent, the porting/reference harnesses, the parity
+notebooks, and the Neuron patches — is licensed under **Apache-2.0** (see [`LICENSE`](LICENSE) and
+[`NOTICE`](NOTICE)).
+
+Each vendored model definition under `<model>/native-pytorch/src/*_neuron/` **retains its upstream
+license** (full text in that directory):
+
+| Port | Upstream | License |
+|---|---|---|
+| CLIP | openai/CLIP | MIT |
+| evo2 | Taykhoom/Evo2-1B-8K | Apache-2.0 |
+| GPN-Star | songlab-cal/gpn | MIT |
+| **Nucleotide-Transformer** | InstaDeepAI | **CC-BY-NC-SA-4.0 — non-commercial, share-alike** |
+| ESM-2 | facebook/esm2 (installed at runtime, not vendored) | MIT |
+
+> ⚠️ **The Nucleotide-Transformer port is non-commercial (CC-BY-NC-SA-4.0).** Use it for non-commercial
+> purposes only, with attribution, and share derivatives alike. For a fully commercial-friendly subset,
+> exclude the `nucleotide-transformer/` directory — the other four ports are permissive (MIT / Apache-2.0).
+
+Separately, the toolchain itself (AWS native-PyTorch Neuron **Beta 3**) is access-gated by the AWS Neuron
+team and is **not** redistributed here — see the access note above.

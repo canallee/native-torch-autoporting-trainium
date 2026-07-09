@@ -1,0 +1,30 @@
+Nucleotide Transformer — vendored model definition
+====================================================
+
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+The model definition in this directory (`modeling_esm.py`, `esm_config.py`) is vendored
+from InstaDeepAI's Nucleotide Transformer:
+
+    InstaDeepAI/nucleotide-transformer-v2-50m-multi-species  (Hugging Face)
+    Copyright (c) InstaDeep Ltd.
+
+It is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International License (CC-BY-NC-SA-4.0). The `NEURON PATCH` modifications applied here (small
+transformers-4.x -> 5.x compatibility shims; see VENDORED.md) are modifications of that work
+and are therefore also made available under CC-BY-NC-SA-4.0.
+
+You are free to share and adapt this material, UNDER THESE TERMS:
+  - Attribution   — credit InstaDeep and indicate changes (the NEURON PATCH shims).
+  - NonCommercial — you may NOT use this material for commercial purposes.
+  - ShareAlike    — derivatives must be distributed under the same license.
+
+This is a human-readable summary, NOT a substitute for the license. The authoritative
+legal text is:
+  - Legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+  - Summary:    https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+NOTE: This directory is the only NON-COMMERCIAL component of this repository. The other
+vendored ports (CLIP, evo2, GPN-Star) and the repository's own code are permissively
+licensed (see the top-level LICENSE and NOTICE). If you require a fully commercial-friendly
+subset, exclude the `nucleotide-transformer/` directory.
